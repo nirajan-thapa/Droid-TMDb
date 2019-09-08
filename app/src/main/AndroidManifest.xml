@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.nirajan.droid.tmdb">
+    package="com.nirajan.droid.movies">
 
     <application
         android:allowBackup="true"

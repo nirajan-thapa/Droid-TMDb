@@ -1,4 +1,4 @@
-package com.nirajan.droid.tmdb
+package com.nirajan.droid.movies
 
 import org.junit.Test
 

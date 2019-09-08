@@ -1,4 +1,4 @@
-package com.nirajan.droid.tmdb
+package com.nirajan.droid.movies
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
