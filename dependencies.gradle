@@ -10,6 +10,7 @@ ext.versions = [
         androidxAppCompatVersion: '1.1.0',
         materialVersion         : '1.0.0',
         MvRx                    : '1.1.0',
+        epoxyVersion            : '3.7.0',
         dagger                  : '2.24',
         junit                   : '4.12',
         testRunner              : '1.2.0',
@@ -40,6 +41,7 @@ ext {
     styleDependencies = [
             androidxAppCompat: "androidx.appcompat:appcompat:${versions.androidxAppCompatVersion}",
             material         : "com.google.android.material:material:${versions.materialVersion}",
+            epoxy            : "com.airbnb.android:epoxy:${versions.epoxyVersion}"
     ]
 
     architectureDependencies = [

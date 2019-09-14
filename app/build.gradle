@@ -36,7 +36,6 @@ dependencies {
     implementation kotlinDependencies.values()
     implementation ktxDependencies.values()
     implementation styleDependencies.values()
-    implementation architectureDependencies.values()
     implementation daggerDependencies.values()
     kapt kaptDependencies.values()
 
