@@ -33,6 +33,9 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation project(':base')
+    implementation project(':home')
+
     implementation kotlinDependencies.values()
     implementation ktxDependencies.values()
     implementation styleDependencies.values()

@@ -12,13 +12,14 @@ ext.versions = [
         MvRx                    : '1.1.0',
         epoxyVersion            : '3.7.0',
         dagger                  : '2.24',
+        constraintLayout        : '1.1.2',
         junit                   : '4.12',
         testRunner              : '1.2.0',
         assertj                 : '3.11.1',
         espresso                : '3.2.0',
-        mockito                 : '2.15.0',
-        mockitoKotlin           : '1.5.0',
-        lifecycleCoreTesting    : '2.0.0-beta01'
+        mockito                 : '2.23.4',
+        runner                  : '1.1.0',
+        lifecycleCoreTesting    : '2.1.0'
 ]
 
 ext.classPaths = [
@@ -41,6 +42,7 @@ ext {
     styleDependencies = [
             androidxAppCompat: "androidx.appcompat:appcompat:${versions.androidxAppCompatVersion}",
             material         : "com.google.android.material:material:${versions.materialVersion}",
+            constraintLayout : "com.android.support.constraint:constraint-layout:$versions.constraintLayout",
             epoxy            : "com.airbnb.android:epoxy:${versions.epoxyVersion}"
     ]
 
@@ -49,32 +51,26 @@ ext {
     ]
 
     daggerDependencies = [
-            dagger         : "com.google.dagger:dagger:${versions.dagger}",
-            daggerProcessor: "com.google.dagger:dagger-android-processor:${versions.dagger}"
+            dagger: "com.google.dagger:dagger:${versions.dagger}"
     ]
 
     kaptDependencies = [
-            daggerCompiler : "com.google.dagger:dagger-compiler:${versions.dagger}"
+            daggerCompiler : "com.google.dagger:dagger-compiler:${versions.dagger}",
+            daggerProcessor: "com.google.dagger:dagger-android-processor:${versions.dagger}"
     ]
 
     testingDependencies = [
-            coreTest       : "androidx.arch.core:core-testing:${versions.lifecycleCoreTesting}",
-            junit          : "junit:junit:${versions.junit}",
-            assertj        : "org.assertj:assertj-core:${versions.assertj}",
-            mockitoCore    : "org.mockito:mockito-core:${versions.mockito}",
-            mockitoPlatform: [
-                    group  : 'org.mockito',
-                    name   : 'mockito-inline',
-                    version: "${versions.mockito}"
-            ],
-            mockitoKotlin  : "com.nhaarman:mockito-kotlin-kt1.1:${versions.mockitoKotlin}"
+            coreTest  : "androidx.arch.core:core-testing:${versions.lifecycleCoreTesting}",
+            junit     : "junit:junit:${versions.junit}",
+            assertj   : "org.assertj:assertj-core:${versions.assertj}",
+            testRules : "androidx.test:rules:${versions.runner}",
+            testRunner: "androidx.test:runner:${versions.runner}"
     ]
 
     uiTestingDependencies = [
-            assertj       : "org.assertj:assertj-core:${versions.assertj}",
-            espresso      : "androidx.test.espresso:espresso-core:${versions.espresso}",
-            mockitoCore   : "org.mockito:mockito-core:${versions.mockito}",
-            mockitoAndroid: "org.mockito:mockito-android:${versions.mockito}",
-            mockitoKotlin : "com.nhaarman:mockito-kotlin-kt1.1:${versions.mockitoKotlin}",
+            assertj    : "org.assertj:assertj-core:${versions.assertj}",
+            core       : "android.arch.core:core-testing:${versions.core}",
+            espresso   : "androidx.test.espresso:espresso-core:${versions.espresso}",
+            mockitoCore: "org.mockito:mockito-core:${versions.mockito}",
     ]
 }

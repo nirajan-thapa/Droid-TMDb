@@ -4,8 +4,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 dependencies {
-    implementation architectureDependencies.values()
     implementation daggerDependencies.values()
-    implementation styleDependencies.epoxy
+    implementation styleDependencies.values()
     kapt kaptDependencies.values()
 }

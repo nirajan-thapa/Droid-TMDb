@@ -1,7 +1,9 @@
 package com.nirajan.droid.movies.base
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.appcompat.widget.Toolbar
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.airbnb.epoxy.EpoxyRecyclerView
@@ -17,6 +19,10 @@ abstract class BaseFragment : BaseMvRxFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         epoxyController.onRestoreInstanceState(savedInstanceState)
+    }
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.fragment_base, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
